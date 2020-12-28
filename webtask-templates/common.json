@@ -431,6 +431,14 @@
           "value": "gd_enrollment_complete"
         },
         {
+          "text": "Made voice call",
+          "value": "gd_send_voice"
+        },
+        {
+          "text": "Error making MFA voice call",
+          "value": "gd_send_voice_failure"
+        },
+        {
           "text": "Users import",
           "value": "fui"
         },
@@ -455,11 +463,11 @@
           "value": "ublkdu"
         },
         {
-          "text": "Success Login",
+          "text": "Success Exchange",
           "value": "sens"
         },
         {
-          "text": "Failed Login",
+          "text": "Failed Exchange",
           "value": "fens"
         }
       ]
