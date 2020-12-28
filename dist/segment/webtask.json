@@ -4,7 +4,6 @@
   "category": "log_export",
   "initialUrlPath": "/login",
   "repository": "https://github.com/matheyal/auth0-logs-to-provider",
-  "codeUrl": "https://raw.githubusercontent.com/matheyal/auth0-logs-to-provider/master/index.js",
   "keywords": [
     "auth0",
     "extension"
@@ -42,22 +41,6 @@
         }
       ]
     },
-    "REMOVE_USER_ID_PREFIX": {
-      "description": "This setting will remove the `auth0|` prefix of the user id before sending it to Segment",
-      "type": "select",
-      "allowMultiple": false,
-      "default": "false",
-      "options": [
-        {
-          "value": "false",
-          "text": "No"
-        },
-        {
-          "value": "true",
-          "text": "Yes"
-        }
-      ]
-    },
     "SEGMENT_KEY": {
       "description": "Segment API Key",
       "required": true
@@ -67,5 +50,6 @@
   "name": "auth0-logs-to-segment-predictice",
   "version": "2.1.3",
   "preVersion": "2.1.2",
-  "description": "This extension will take all of your Auth0 logs and export them to Segment"
+  "description": "This extension will take all of your Auth0 logs and export them to Segment",
+  "codeUrl": "https://raw.githubusercontent.com/matheyal/auth0-logs-to-provider/master/dist/segment/auth0-logs-to-segment-predictice.extension.2.1.3.js"
 }

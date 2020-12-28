@@ -3,8 +3,11 @@
   "type": "cron",
   "category": "log_export",
   "initialUrlPath": "/login",
-  "repository": "https://github.com/auth0-extensions/auth0-logs-to-provider",
-  "keywords": ["auth0", "extension"],
+  "repository": "https://github.com/matheyal/auth0-logs-to-provider",
+  "keywords": [
+    "auth0",
+    "extension"
+  ],
   "schedule": "0 */5 * * * *",
   "auth0": {
     "createClient": true,
@@ -121,10 +124,6 @@
         {
           "text": "Failed Exchange",
           "value": "fertft"
-        },
-        {
-          "text": "Failed Exchange",
-          "value": "ferrt"
         },
         {
           "text": "Success Exchange",
@@ -429,14 +428,6 @@
         {
           "text": "Guardian enrollment complete",
           "value": "gd_enrollment_complete"
-        },
-        {
-          "text": "Made voice call",
-          "value": "gd_send_voice"
-        },
-        {
-          "text": "Error making MFA voice call",
-          "value": "gd_send_voice_failure"
         },
         {
           "text": "Users import",

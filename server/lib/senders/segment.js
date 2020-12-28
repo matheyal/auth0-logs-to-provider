@@ -9,7 +9,6 @@ const logger = require('../logger');
 
 module.exports = () => {
   const analytics = new Segment(config('SEGMENT_KEY'));
-  const removePrefix = config('REMOVE_USER_ID_PREFIX')
 
   return (logs, callback) => {
     if (!logs || !logs.length) {
@@ -23,7 +22,7 @@ module.exports = () => {
         return cb();
       }
 
-      const userId = removePrefix === true ? log.user_id.replace(/^auth0\|/, '') : log.user_id;
+      
 
       return managementApi
         .getClient({
@@ -34,7 +33,7 @@ module.exports = () => {
         .then(auth0 => auth0.users.get({ id: log.user_id }))
         .then((user) => {
           analytics.track({
-            userId,
+            userId: user.user_id.replace(/^auth0\|/, ''),
             event: loggingTools.logTypes.get(log.type),
             properties: _.extend({}, user.user_metadata, _.omit(user, ['user_metadata', 'app_metadata']), user.app_metadata)
           }, cb);
